@@ -1,0 +1,49 @@
+version: '2'
+
+networks:
+    bibbox-default-network:
+      external: true
+
+services:
+
+  §§INSTANCE-nextcloud:
+    image: nextcloud:14.0-fpm
+    container_name:  §§INSTANCE-nextcloud
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - §§INSTANCE-nextcloud-db:nextcloud-db
+    ports:
+      - "§§PORT:80"
+    depends_on:
+      - §§INSTANCE-nextcloud-db
+      - §§INSTANCE-nextcloud-data
+    volumes_from: 
+      - §§INSTANCE-nextcloud-data
+
+  §§INSTANCE-nextcloud-db:
+    image: mariadb
+    container_name: §§INSTANCE-nextcloud-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=§§MARIADB_ROOT_PASSWORD
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=§§MARIADB_PASSWORD
+    volumes_from: 
+      - §§INSTANCE-nextcloud-data
+    depends_on:
+      - §§INSTANCE-nextcloud-data
+
+  §§INSTANCE-nextcloud-data:
+    image: busybox
+    container_name: §§INSTANCE-nextcloud-data
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/data:/var/www/html/data
+      - ./data/apps:/var/www/html/apps
+

@@ -1,0 +1,20 @@
+[
+    {
+       "id":"MARIADB_ROOT_PASSWORD",
+       "display_name":"Maria DB Root Password",
+       "type":"text",
+       "default_value":"thispasswordisneverusedeveninsidethecontainer",
+       "description":"Root Password for Maria DB, remember well",
+       "min_length": "1",
+       "max_length": "128"
+    },
+    {
+       "id":"MARIADB_PASSWORD",
+       "display_name":"Maria DB Password",
+       "type":"text",
+       "default_value":"changethispasswordinproductionenvironments",
+       "description":" Password for Maria DB (change in production)",
+       "min_length": "1",
+       "max_length": "128"
+    }
+]

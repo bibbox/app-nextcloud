@@ -1,0 +1,4 @@
+{
+  runningcontainers:["§§INSTANCE-nextcloud", "§§INSTANCE-nextcloud-db"],
+  supportcontainers:["§§INSTANCE-nextcloud-data"]
+}

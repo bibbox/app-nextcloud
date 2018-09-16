@@ -1,0 +1,45 @@
+version: '2'
+
+services:
+
+  bibbox-nextcloud:
+    image: nextcloud:14.0-fpm
+    container_name:  bibbox-nextcloud
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    links:
+      - bibbox-nextcloud-db:nextcloud-db
+    ports:
+      - "8065:80"
+    depends_on:
+      - §§INSTANCE-nextcloud-db
+      - §§INSTANCE-nextcloud-data
+    volumes_from: 
+      - §§INSTANCE-nextcloud-data
+
+  bibbox-nextcloud-db:
+    image: mariadb
+    container_name: §§INSTANCE-nextcloud-db
+    restart: unless-stopped
+    networks:
+      - bibbox-default-network
+    user: root
+    environment:
+      - MYSQL_ROOT_PASSWORD=§§MARIADB_ROOT_PASSWORD
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=§§MARIADB_PASSWORD
+    volumes_from: 
+      - bibbox-nextcloud-data
+    depends_on:
+      - bibbox-nextcloud-data
+
+  bibbox-nextcloud-data:
+    image: busybox
+    container_name: §§INSTANCE-nextcloud-data
+    volumes:
+      - ./data/mysql:/var/lib/mysql
+      - ./data/data:/var/www/html/data
+      - ./data/apps:/var/www/html/apps
+
