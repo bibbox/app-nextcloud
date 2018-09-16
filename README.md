@@ -14,6 +14,8 @@ Clone the github repsoitory and start the install.sh. If necessary change the po
 
 `sudo ./install.sh`
 
+* initial user/passwordd: **v / vendetta**
+
 
 ## Install within BIBBOX
 
