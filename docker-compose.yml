@@ -5,9 +5,6 @@ services:
   bibbox-nextcloud:
     image: nextcloud:14.0
     container_name:  bibbox-nextcloud
-    restart: unless-stopped
-    networks:
-      - bibbox-default-network
     environment:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
@@ -28,9 +25,6 @@ services:
   bibbox-nextcloud-db:
     image: mariadb
     container_name: bibbox-nextcloud-db
-    restart: unless-stopped
-    networks:
-      - bibbox-default-network
     user: root
     environment:
       - MYSQL_ROOT_PASSWORD=bibboxlocal
