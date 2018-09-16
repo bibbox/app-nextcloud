@@ -8,6 +8,13 @@ services:
     restart: unless-stopped
     networks:
       - bibbox-default-network
+    environment:
+      - MYSQL_DATABASE=nextcloud
+      - MYSQL_USER=nextcloud
+      - MYSQL_PASSWORD=§§MARIADB_PASSWORD
+      - MYSQL_HOST=nextcloud-db
+      - NEXTCLOUD_ADMIN_USER=v
+      - NEXTCLOUD_ADMIN_PASSWORD=vendetta
     links:
       - bibbox-nextcloud-db:nextcloud-db
     ports:
@@ -30,9 +37,7 @@ services:
       - MYSQL_DATABASE=nextcloud
       - MYSQL_USER=nextcloud
       - MYSQL_PASSWORD=§§MARIADB_PASSWORD
-      - NEXTCLOUD_ADMIN_USER=v
-      - NEXTCLOUD_ADMIN_PASSWORD=vendetta
-    volumes_from: 
+    volumes_from:
       - bibbox-nextcloud-data
     depends_on:
       - bibbox-nextcloud-data
