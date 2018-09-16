@@ -12,7 +12,7 @@ $ cd app-nextcloud
 $ chmod +x install.sh
 $ ./install.sh
 ```
-Open in a browser e [http://localhost:8065](http://localhost:8065) and login with the user **v** credentials  **vendetta**
+Open in a browser e [http://127.0.0.1:8065](http://127.0.0.1:8065) and login with the user **v** credentials  **vendetta**
 
 
 ## Install within BIBBOX
