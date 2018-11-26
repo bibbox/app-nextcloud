@@ -53,6 +53,5 @@ services:
     container_name: §§INSTANCE-nextcloud-data
     volumes:
       - ./data/mysql:/var/lib/mysql
-      - ./data/data:/var/www/html/data
-      - ./data/apps:/var/www/html/apps
+      - ./data/html:/var/www/html
 
