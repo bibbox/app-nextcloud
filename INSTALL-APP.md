@@ -4,7 +4,23 @@
 
 ## NextCloud Installation Instructions 
 
-* As soon as NetCloud has been installed within the BIBBOX, you can launch it from the Applications menu. If the login page dous not appear, take your time the PHP app has to be setup in the background.
+* As soon as NetCloud has been installed within the BIBBOX, you can launch it from the Applications menu. If the login page does not appear, take your time the PHP app has to be setup in the background.
+
+In the new version you need the configure the trusted domain, go to your base directory, and edit the config file with
+
+        sudo nano data/html/config/config.php   
+
+and replace in 
+
+```php
+trusted_domains' =>
+  array (
+    0 => 'localhost',
+  ),
+```
+
+localhost with the domainname of your nextcloud APP. 
+
 
 
 ![SCREEN1](screen-01.png)
