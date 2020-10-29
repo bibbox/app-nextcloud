@@ -1,4 +1,4 @@
 <?php
 $CONFIG = array (
-  'htaccess.RewriteBase' => '/nextcloud2024',
+  'htaccess.RewriteBase' => '/nextcloud2027',
 );
