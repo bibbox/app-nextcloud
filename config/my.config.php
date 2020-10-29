@@ -4,4 +4,5 @@ $CONFIG = array (
   "overwritehost"     => "localhost:8010",
   "overwriteprotocol" => "http",
   "overwritewebroot"  => "/nextcloud2024",
+  "htaccess.RewriteBase" => "/nextcloud2024",
 );
