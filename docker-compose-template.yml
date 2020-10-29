@@ -22,7 +22,7 @@ services:
     links:
       - §§INSTANCE-nextcloud-db:nextcloud-db
     ports:
-      - "§§PORT80"
+      - "80"
     depends_on:
       - §§INSTANCE-nextcloud-db
     volumes: 
