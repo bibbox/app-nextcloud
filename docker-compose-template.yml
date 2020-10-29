@@ -33,7 +33,7 @@ services:
       - INSTANCENAME=§§INSTANCE
       - BASE_PATH="/§§INSTANCE"
       - TARGET="/var/www/html/§§INSTANCE"
-    entrypoint: /var/entrypoint.sh
+#    entrypoint: /var/entrypoint.sh
 
   §§INSTANCE-nextcloud-db:
     image: mariadb
