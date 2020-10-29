@@ -29,8 +29,8 @@ services:
       - ./data/html:/var/www/html
       - ./config/config.php:/var/www/html/§§INSTANCE/config/config.php
     environment:
-      - BASE_PATH: "/§§INSTANCE"
-      - TARGET: "/var/www/html/§§INSTANCE"
+      - BASE_PATH="/§§INSTANCE"
+      - TARGET="/var/www/html/§§INSTANCE"
 
   §§INSTANCE-nextcloud-db:
     image: mariadb
