@@ -444,7 +444,7 @@ $CONFIG = array(
  * the automatic detection; for example ``www.example.com``, or specify the port
  * ``www.example.com:8080``.
  */
-'overwritehost' => '',
+'overwritehost' => 'http://localhost:8010',
 
 /**
  * When generating URLs, Nextcloud attempts to detect whether the server is
@@ -462,7 +462,7 @@ $CONFIG = array(
  * it may be difficult for Nextcloud to detect this parameter, resulting in
  * invalid URLs.
  */
-'overwritewebroot' => '',
+'overwritewebroot' => '/nextcloud2022',
 
 /**
  * This option allows you to define a manual override condition as a regular
@@ -482,7 +482,7 @@ $CONFIG = array(
  *
  * Defaults to ``''`` (empty string)
  */
-'overwrite.cli.url' => '',
+'overwrite.cli.url' => 'http://localhost:8010/nextcloud2022',
 
 /**
  * To have clean URLs without `/index.php` this parameter needs to be configured.
@@ -509,7 +509,7 @@ $CONFIG = array(
  *
  * Defaults to ``''`` (empty string)
  */
-'htaccess.RewriteBase' => '/',
+'htaccess.RewriteBase' => '/nextcloud 2022',
 
 /**
  * For server setups, that don't have `mod_env` enabled or restricted (e.g. suEXEC)
