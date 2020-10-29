@@ -27,7 +27,7 @@ services:
       - §§INSTANCE-nextcloud-db
     volumes: 
       - ./data/html:/var/www/html
-      - ./config/config.php:/var/www/html/§§INSTANCE/config/config.php
+      - ./config/config.php:/var/www/html/config/config.php
     environment:
       - BASE_PATH="/§§INSTANCE"
       - TARGET="/var/www/html/§§INSTANCE"
