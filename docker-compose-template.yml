@@ -30,7 +30,7 @@ services:
       - ./config:/var/www/html/config
       - ./entrypoint.sh:/var/entrypoint.sh
     environment:
-      - INSTANCENAME="§§INSTANCE"
+      - INSTANCENAME=§§INSTANCE
       - BASE_PATH="/§§INSTANCE"
       - TARGET="/var/www/html/§§INSTANCE"
     entrypoint: /var/entrypoint.sh
