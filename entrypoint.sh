@@ -1,3 +1,4 @@
+#!/bin/bash
 file=/opt/dist/deployed.done
 if [ ! -f $file ] ; then
   
