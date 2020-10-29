@@ -1,18 +1,18 @@
 <?php
 $CONFIG = array (
-  'htaccess.RewriteBase' => '/nextcloud7/',
+  'htaccess.RewriteBase' => '/nextcloud7777/',
   'memcache.local' => '\\OC\\Memcache\\APCu',
   'apps_paths' => 
   array (
     0 => 
     array (
-      'path' => '/var/www/html/nextcloud7/apps',
+      'path' => '/var/www/html/nextcloud7777/apps',
       'url' => '/apps',
       'writable' => false,
     ),
     1 => 
     array (
-      'path' => '/var/www/html/nextcloud7/custom_apps',
+      'path' => '/var/www/html/nextcloud7777/custom_apps',
       'url' => '/custom_apps',
       'writable' => true,
     ),
@@ -26,7 +26,7 @@ $CONFIG = array (
   'datadirectory' => '/var/www/html/data',
   'dbtype' => 'mysql',
   'version' => '14.0.14.1',
-  'overwrite.cli.url' => 'http://localhost:8010/nextcloud7/',
+  'overwrite.cli.url' => 'http://localhost:8010/nextcloud7777/',
   'dbname' => 'nextcloud',
   'dbhost' => 'nextcloud-db',
   'dbport' => '',
