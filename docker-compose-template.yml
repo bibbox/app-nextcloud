@@ -27,6 +27,9 @@ services:
       - §§INSTANCE-nextcloud-db
     volumes: 
       - ./data/html:/var/www/html
+    environment:
+      - BASE_PATH: "/§§INSTANCE"
+      - TARGET: "/var/www/html/§§INSTANCE"
 
   §§INSTANCE-nextcloud-db:
     image: mariadb
