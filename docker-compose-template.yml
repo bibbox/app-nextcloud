@@ -1,4 +1,4 @@
-version: '2'
+version: '3'
 
 networks:
     bibbox-default-network:
@@ -25,9 +25,8 @@ services:
       - "§§PORT:80"
     depends_on:
       - §§INSTANCE-nextcloud-db
-      - §§INSTANCE-nextcloud-data
-    volumes_from: 
-      - §§INSTANCE-nextcloud-data
+    volumes: 
+      - ./data/html:/var/www/html
 
   §§INSTANCE-nextcloud-db:
     image: mariadb
@@ -43,15 +42,5 @@ services:
       - MYSQL_PASSWORD=§§MARIADB_PASSWORD
       - NEXTCLOUD_ADMIN_USER=v
       - NEXTCLOUD_ADMIN_PASSWORD=vendetta
-    volumes_from:
-      - §§INSTANCE-nextcloud-data
-    depends_on:
-      - §§INSTANCE-nextcloud-data
-
-  §§INSTANCE-nextcloud-data:
-    image: busybox
-    container_name: §§INSTANCE-nextcloud-data
     volumes:
       - ./data/mysql:/var/lib/mysql
-      - ./data/html:/var/www/html
-
