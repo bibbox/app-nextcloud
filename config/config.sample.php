@@ -462,7 +462,7 @@ $CONFIG = array(
  * it may be difficult for Nextcloud to detect this parameter, resulting in
  * invalid URLs.
  */
-'overwritewebroot' => '/nextcloud2022',
+'overwritewebroot' => '/nextcloud2023',
 
 /**
  * This option allows you to define a manual override condition as a regular
@@ -482,7 +482,7 @@ $CONFIG = array(
  *
  * Defaults to ``''`` (empty string)
  */
-'overwrite.cli.url' => 'http://localhost:8010/nextcloud2022',
+'overwrite.cli.url' => 'http://localhost:8010/nextcloud2023',
 
 /**
  * To have clean URLs without `/index.php` this parameter needs to be configured.
@@ -509,7 +509,7 @@ $CONFIG = array(
  *
  * Defaults to ``''`` (empty string)
  */
-'htaccess.RewriteBase' => '/nextcloud 2022',
+'htaccess.RewriteBase' => '/nextcloud 2023',
 
 /**
  * For server setups, that don't have `mod_env` enabled or restricted (e.g. suEXEC)
