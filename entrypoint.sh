@@ -9,11 +9,10 @@ if [ ! -f $file ] ; then
   
   chown -R www-data /var/www/html/§§INSTANCENAME/
   
-  service apache2 reload
   apt-get update
   apt-get install nano
   
-  
+  service apache2 reload
   mkdir /opt/dist/
   touch /opt/dist/deployed.done
   #service apache2 start
