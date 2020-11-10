@@ -1,7 +1,7 @@
 <?php
 $overwriteHost = getenv('OVERWRITEHOST');
 if ($overwriteHost) {
-  $CONFIG['overwritehost'] = $overwriteHost;
+  $CONFIG['overwritehost'] = localhost:8010;
 }
 
 $overwriteProtocol = getenv('OVERWRITEPROTOCOL');
