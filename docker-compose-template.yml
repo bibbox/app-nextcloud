@@ -27,6 +27,13 @@ services:
       - §§INSTANCE-nextcloud-db
     volumes: 
       - ./data/html:/var/www/html
+      - ./config:/var/www/html/config
+      - ./entrypoint.sh:/var/entrypoint.sh
+    environment:
+      - INSTANCENAME=§§INSTANCE
+      - BASE_PATH="/§§INSTANCE"
+      - TARGET="/var/www/html/§§INSTANCE"
+    entrypoint: /var/entrypoint.sh
 
   §§INSTANCE-nextcloud-db:
     image: mariadb
