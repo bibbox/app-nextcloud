@@ -27,7 +27,7 @@ services:
       - §§INSTANCE-nextcloud-db
     volumes: 
       - ./data/html:/var/www/html
-      - ./config:/var/www/html/config
+      - ./confignew:/var/www/html/config
       - ./entrypoint.sh:/var/entrypoint.sh
     environment:
       - INSTANCENAME=§§INSTANCE
