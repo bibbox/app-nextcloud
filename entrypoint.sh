@@ -3,11 +3,11 @@ file=/opt/dist/deployed.done
 if [ ! -f $file ] ; then
   
   mkdir /var/www/html/nextcloud2028
-  cp -R /var/www/html/* /var/www/html/§§INSANCE/
+  cp -R /var/www/html/* /var/www/html/§§INSTANCENAME/
   
-  rm -R /var/www/html/nextcloud2027/§§INSTANCE/
+  rm -R /var/www/html/nextcloud2027/§§INSTANCENAME/
   
-  chown -R www-data /var/www/html/§§INSTANCE/
+  chown -R www-data /var/www/html/§§INSTANCENAME/
   
   service apache2 reload
   apt-get update
