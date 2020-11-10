@@ -16,6 +16,6 @@ if [ ! -f $file ] ; then
   
   mkdir /opt/dist/
   touch /opt/dist/deployed.done
-  service apache2 start
-  tail -f /var/log/dpkg.log
+  #service apache2 start
+  #tail -f /var/log/dpkg.log
 fi
