@@ -1,7 +1,7 @@
 #!/bin/bash
 file=/opt/dist/deployed.done
 if [ ! -f $file ] ; then
-  while [ ! -f /var/www/html/next18/lib/versioncheck.php ]; do sleep 1; done
+  while [ ! -f /var/www/html/§§INSTANCENAME/lib/versioncheck.php ]; do sleep 1; done
   sleep 2
   mkdir /var/www/html/§§INSTANCENAME
   cp -R /var/www/html/* /var/www/html/§§INSTANCENAME/
