@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-nextcloud:
-    image: nextcloud:20.0
+    image: nextcloud:14.0
     container_name:  §§INSTANCE-nextcloud
     restart: unless-stopped
     networks:
@@ -27,7 +27,7 @@ services:
       - §§INSTANCE-nextcloud-db
     volumes: 
       - ./data/html:/var/www/html
-      - ./confignew:/var/www/html/config
+      - ./config:/var/www/html/config
       - ./entrypoint.sh:/var/entrypoint.sh
     environment:
       - INSTANCENAME=§§INSTANCE
