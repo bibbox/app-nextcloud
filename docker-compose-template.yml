@@ -7,7 +7,7 @@ networks:
 services:
 
   §§INSTANCE-nextcloud:
-    image: nextcloud:14.0
+    image: nextcloud:20.0
     container_name:  §§INSTANCE-nextcloud
     restart: unless-stopped
     networks:
