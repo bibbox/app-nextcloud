@@ -5,7 +5,7 @@ if [ ! -f $file ] ; then
   mkdir /var/www/html/§§INSTANCENAME
   cp -R /var/www/html/* /var/www/html/§§INSTANCENAME/
   
-  rm -R /var/www/html/nextcloud2027/§§INSTANCENAME/
+  rm -R /var/www/html/§§INSTANCENAME/§§INSTANCENAME/
   
   chown -R www-data /var/www/html/§§INSTANCENAME/
   
