@@ -1,5 +1,7 @@
 # NextCloud BIBBOX application
 
+## IMPORTANT: This repository is deprecated and should not be used.
+
 This container can be installed as [BIBBOX APP](http://bibbox.readthedocs.io/en/latest/admin-documentation/ "BIBBOX App Store") or standalone, after the  installation follow these [instructions](https://github.com/bibbox/app-nextcloud/blob/master/INSTALL-APP.md).
 
 ## Standalone Installation
